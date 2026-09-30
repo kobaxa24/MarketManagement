@@ -1,0 +1,8 @@
+﻿CREATE TABLE Countries
+(
+    CountryID INT PRIMARY KEY IDENTITY(1,1),
+    CountryName NVARCHAR(50) NOT NULL,
+    IsActive BIT NOT NULL DEFAULT 1,
+    CreatedDate DATETIME NOT NULL DEFAULT GETDATE(),
+    UpdatedDate DATETIME NULL
+);

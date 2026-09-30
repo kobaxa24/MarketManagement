@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Market.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{c99e5553-ba20-4c3f-abfb-0a4c5d3d31fd}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Market.Database</RootNamespace>
+    <AssemblyName>Market.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Scripts\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Market.Database.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Categories.sql" />
+    <Build Include="dbo\Tables\Attributes.sql" />
+    <Build Include="dbo\Tables\CategoryAttributes.sql" />
+    <Build Include="dbo\Tables\Countries.sql" />
+    <Build Include="dbo\Tables\Suppliers.sql" />
+    <Build Include="dbo\Tables\Products.sql" />
+    <Build Include="dbo\Tables\ProductAttributeValues.sql" />
+    <Build Include="dbo\Tables\EmployeeRoles.sql" />
+    <Build Include="dbo\Tables\Employees.sql" />
+    <Build Include="dbo\Tables\EmployeeContacts.sql" />
+    <Build Include="dbo\Tables\UserAccounts.sql" />
+    <Build Include="dbo\Tables\Customers.sql" />
+    <Build Include="dbo\Tables\CustomerContacts.sql" />
+    <Build Include="dbo\Tables\Sales.sql" />
+    <Build Include="dbo\Tables\SalesItems.sql" />
+    <Build Include="dbo\Tables\StockTransactions.sql" />
+    <Build Include="dbo\Functions\fn_DetectCircularReference.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CategoryInsert.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CategoryUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CategoryDelete.sql" />
+    <Build Include="dbo\Stored Procedures\sp_AttributeInsert.sql" />
+    <Build Include="dbo\Stored Procedures\sp_AttributeUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\sp_AttributeDelete.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CountryInsert.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CountryUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CountryDelete.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SupplierInsert.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SupplierUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SupplierDelete.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ProductInsert.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ProductUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ProductDelete.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ProductAttributeValueInsert.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ProductAttributeValueUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ChangeProductAttribute.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EmployeeRoleInsert.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EmployeeRoleUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EmployeeRoleDelete.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EmployeeInsert.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EmployeeUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EmployeeDelete.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EmployeeContactInsert.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EmployeeContactUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EmployeeContactDelete.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CustomerInsert.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CustomerUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CustomerContactInsert.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CustomerContactUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ActivateCustomerloyalty.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CategoryGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_AttributeGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ProductGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SupplierGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EmployeeGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CustomerGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CategoryAttributeGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CountryGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ProductAttributeValueGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EmployeeRoleGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EmployeeContactGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UserAccountGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CustomerContactGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SaleGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SalesItemGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_StockTransactionGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CategoryGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_AttributeGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ProductGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SupplierGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EmployeeGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CustomerGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CategoryAttributeGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CountryGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ProductAttributeValueGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EmployeeRoleGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EmployeeContactGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UserAccountGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CustomerContactGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SaleGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SalesItemGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_StockTransactionGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CategoryAssignAttribute.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CategoryUnassignAttribute.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ClearDatabase.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SaleInsert.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UserAccountInsert.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetProductsByCategory.sql" />
+    <Build Include="dbo\Stored Procedures\sp_EnableDisableUser.sql" />
+    <Build Include="dbo\Stored Procedures\sp_StockTransactionInsert.sql" />
+    <Build Include="dbo\Stored Procedures\sp_CategoryGetByAttributeID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_AttributeGetByCategoryID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SeedDatabase.sql" />
+  </ItemGroup>
+</Project>

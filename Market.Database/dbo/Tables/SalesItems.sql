@@ -1,0 +1,11 @@
+﻿CREATE TABLE SalesItems
+(
+    SalesItemID INT PRIMARY KEY IDENTITY(1,1),
+    SaleID INT NOT NULL,
+    ProductID INT NOT NULL,
+    Quantity FLOAT NOT NULL,
+    UnitPrice MONEY NOT NULL,
+    Discount FLOAT NOT NULL DEFAULT 0,
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID),
+    FOREIGN KEY (SaleID) REFERENCES Sales(SaleID)
+)

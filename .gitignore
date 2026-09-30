@@ -1,0 +1,14 @@
+.vs/
+**/bin/
+**/obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+TestResults/
+*.nupkg
+packages/
+*.db
+*.sqlite
+*.sqlite3
+appsettings.Development.json

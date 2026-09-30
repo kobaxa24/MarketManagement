@@ -1,0 +1,12 @@
+5/12/2026 10:21:26 PM	This log contains information about the import operation of the script 'kidequery.sql' into project 'Market.Database' on computer 'DESKTOP-H0IDC2S' by user'lexom.
+5/12/2026 10:21:26 PM	Started importing file: C:\Users\lexom\Desktop\kidequery.sql 
+5/12/2026 10:21:26 PM	File name C:\Users\lexom\Desktop\kidequery.sql (size: 918)
+5/12/2026 10:21:26 PM	Parsing import script
+5/12/2026 10:21:26 PM	Total number of batches in script: 1
+5/12/2026 10:21:26 PM	Total number of statements in script: 1
+5/12/2026 10:21:26 PM	The script was successfully imported into the project.
+5/12/2026 10:21:26 PM	Analyzing schema objects...
+5/12/2026 10:21:26 PM	Scanning project for duplicate elements
+5/12/2026 10:21:26 PM	Finished duplicate element processing
+5/12/2026 10:21:27 PM	A summary of the import was saved to the following location: C:\Users\lexom\Source\Repos\Group-08\G08_Market\Market.Database\Import Script Logs\kidequery_sql_20260512062126.log
+5/12/2026 10:21:27 PM	Click Finish to continue...

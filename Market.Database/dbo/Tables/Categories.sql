@@ -1,0 +1,10 @@
+﻿CREATE TABLE Categories (
+    CategoryID INT PRIMARY KEY IDENTITY(1,1),
+    ParentID INT NULL,
+    CategoryName NVARCHAR(100) NOT NULL UNIQUE,
+    Description NVARCHAR(1000) NULL,
+    IsActive BIT NOT NULL DEFAULT 1,
+    CreatedDate DATETIME NOT NULL DEFAULT GETDATE(),
+    UpdatedDate DATETIME NULL,
+    FOREIGN KEY (ParentID) REFERENCES Categories(CategoryID)
+);

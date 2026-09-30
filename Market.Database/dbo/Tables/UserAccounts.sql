@@ -1,0 +1,10 @@
+﻿CREATE TABLE UserAccounts(
+    EmployeeID INT PRIMARY KEY,
+    Username VARCHAR(50) NOT NULL UNIQUE,
+    PasswordHash VARBINARY(255) NOT NULL,
+    IsEnabled BIT NOT NULL DEFAULT 1,
+    IsActive BIT NOT NULL DEFAULT 1,
+    CreatedDate DATETIME NOT NULL DEFAULT GETDATE(),
+    UpdatedDate DATETIME NULL,
+    FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID)
+)
