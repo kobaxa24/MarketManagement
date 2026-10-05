@@ -21,6 +21,8 @@ public sealed class UnitOfWork : IUnitOfWork, IDisposable
     private readonly Lazy<IStockTransactionRepository> _stockTransactionRepository;
     private readonly Lazy<ISupplierRepository> _supplierRepository;
     private readonly Lazy<IUserAccountRepository> _userAccountRepository;
+    private readonly Lazy<ICustomerContactRepository> _customerContactRepository;
+    private readonly Lazy<IEmployeeContactsRepository> _employeeContactsRepository;
 
     public UnitOfWork(DbConnection connection)
     {
@@ -41,6 +43,8 @@ public sealed class UnitOfWork : IUnitOfWork, IDisposable
             new Lazy<IStockTransactionRepository>(() => new StockTransactionRepository(_connection));
         _supplierRepository = new Lazy<ISupplierRepository>(() => new SupplierRepository(_connection));
         _userAccountRepository = new Lazy<IUserAccountRepository>(() => new UserAccountRepository(_connection));
+        _customerContactRepository = new Lazy<ICustomerContactRepository>(() => new CustomerContactRepository(_connection));
+        _employeeContactsRepository = new Lazy<IEmployeeContactsRepository>(() => new EmployeeContactsRepository(_connection));
 
     }
 
@@ -57,6 +61,8 @@ public sealed class UnitOfWork : IUnitOfWork, IDisposable
     public IStockTransactionRepository StockTransactionRepository => _stockTransactionRepository.Value;
     public ISupplierRepository SupplierRepository => _supplierRepository.Value;
     public IUserAccountRepository UserAccountRepository => _userAccountRepository.Value;
+    public ICustomerContactRepository CustomerContactRepository => _customerContactRepository.Value;
+    public IEmployeeContactsRepository EmployeeContactsRepository => _employeeContactsRepository.Value;
 
     public void BeginTransaction()
     {

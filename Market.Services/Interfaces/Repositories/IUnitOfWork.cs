@@ -15,5 +15,7 @@ public interface IUnitOfWork : IDisposable
     IStockTransactionRepository StockTransactionRepository { get; }
     ISupplierRepository SupplierRepository { get; }
     IUserAccountRepository UserAccountRepository { get; }
+    ICustomerContactRepository CustomerContactRepository { get; }
+    IEmployeeContactsRepository EmployeeContactsRepository { get; }
 
 }

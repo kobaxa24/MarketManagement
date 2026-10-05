@@ -51,7 +51,7 @@ BEGIN
         (1, 'John', 'Smith'), (2, 'Emma', 'Johnson'), (3, 'Michael', 'Williams'),
         (4, 'Olivia', 'Brown'), (5, 'James', 'Jones'), (6, 'Sophia', 'Garcia'),
         (7, 'William', 'Miller'), (8, 'Isabella', 'Davis'), (9, 'Benjamin', 'Rodriguez'),
-        (10, 'Mia', 'Martinez');
+        (10, 'Mia', 'Martinez'),(1, 'Test', 'Employee1'),(1, 'Test', 'Employee2'),(1, 'Test', 'Employee3'),(1, 'Test', 'Employee4');;
 
     -- 8. Products (CategoryID/SupplierID 1-10)
     INSERT INTO Products (CategoryID, SupplierID, ProductName, Price) VALUES

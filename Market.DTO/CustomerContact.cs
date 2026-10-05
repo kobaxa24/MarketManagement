@@ -8,7 +8,7 @@ namespace Market.DTO
         public int CustomerContactID { get; set; }
         public string CustomerEmail { get; set; } = null!;
         public int CustomerID { get; set; }
-        public string ContactType { get; set; } = null!;
+        public int ContactType { get; set; }
         public string ContactValue { get; set; } = null!;
 
         [IgnoreForInsert, IgnoreForUpdate]

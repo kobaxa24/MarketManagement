@@ -7,7 +7,7 @@ namespace Market.DTO
         [IgnoreForInsert]
         public int EmployeeID { get; set; }
         public string Username { get; set; } = null!;
-        public string PasswordHash { get; set; } = null!;
+        public byte[] PasswordHash { get; set; } = null!;
         public bool IsEnabled { get; set; }
 
         [IgnoreForInsert, IgnoreForUpdate]

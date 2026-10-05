@@ -4,7 +4,7 @@ using Market.Services.Interfaces.Repositories;
 
 namespace Market.Repositories;
 
-public sealed class SaleItemRepository : BaseRepository<SaleItem>, ISaleItemRepository
+public sealed class SaleItemRepository : BaseRepository<SalesItem>, ISaleItemRepository
 {
     public SaleItemRepository(DbConnection connection) : base(connection)
     {

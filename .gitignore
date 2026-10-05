@@ -12,3 +12,6 @@ packages/
 *.sqlite
 *.sqlite3
 appsettings.Development.json
+*.dbmdl
+*.jfm
+Market.Database/Import Script Logs/

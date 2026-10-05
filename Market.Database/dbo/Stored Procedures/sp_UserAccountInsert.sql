@@ -2,6 +2,7 @@
     @EmployeeID INT,
     @Username VARCHAR(50),
     @PasswordHash VARBINARY(255)
+
 AS
 BEGIN
     SET NOCOUNT ON;

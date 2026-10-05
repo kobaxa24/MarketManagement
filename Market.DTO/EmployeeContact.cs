@@ -7,7 +7,7 @@ namespace Market.DTO
         [IgnoreForInsert]
         public int EmployeeContactID { get; set; }
         public int EmployeeID { get; set; }
-        public string ContactType { get; set; } = null!;
+        public int ContactType { get; set; }
         public string ContactValue { get; set; } = null!;
 
         [IgnoreForInsert, IgnoreForUpdate]

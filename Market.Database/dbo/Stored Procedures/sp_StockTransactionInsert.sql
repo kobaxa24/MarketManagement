@@ -1,8 +1,9 @@
-﻿CREATE   PROCEDURE sp_StockTransactionInsert
+﻿CREATE PROCEDURE sp_StockTransactionInsert
     @ProductID INT,
     @SupplierID INT,
     @EmployeeID INT,
-    @Quantity FLOAT
+    @Quantity FLOAT,
+    @StockTransactionID INT OUTPUT
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -31,8 +32,12 @@ BEGIN
         RETURN 1;
     END
 
-    INSERT INTO StockTransactions (ProductID, SupplierID, EmployeeID, Quantity, TransactionDate)
-    VALUES (@ProductID, @SupplierID, @EmployeeID, @Quantity, GETDATE());
+    INSERT INTO StockTransactions
+        (ProductID, SupplierID, EmployeeID, Quantity, TransactionDate)
+    VALUES
+        (@ProductID, @SupplierID, @EmployeeID, @Quantity, GETDATE());
+
+    SET @StockTransactionID = SCOPE_IDENTITY();
 
     RETURN 0;
 END

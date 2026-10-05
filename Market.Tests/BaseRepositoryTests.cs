@@ -14,28 +14,6 @@ namespace Market.Tests
         protected SqlConnection Connection;
         protected IUnitOfWork UnitOfWork;
 
-        //TODO: move this to a separate class and call it in the [SetUpFixture] class
-        public static void ClearDatabase()
-        {
-            using var connection = new SqlConnection(ConnectionString);
-            connection.Open();
-
-            connection.Execute(
-                "sp_ClearDatabase",
-                commandType: CommandType.StoredProcedure);
-        }
-
-        //TODO: move this to a separate class and call it in the [SetUpFixture] class
-        public static void SeedDatabase()
-        {
-            using var connection = new SqlConnection(ConnectionString);
-            connection.Open();
-
-            connection.Execute(
-                "sp_SeedDatabase",
-                commandType: CommandType.StoredProcedure);
-        }
-
         [SetUp]
         public void BaseSetup()
         {

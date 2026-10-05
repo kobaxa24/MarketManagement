@@ -129,7 +129,7 @@
     <Build Include="dbo\Stored Procedures\sp_UserAccountGetAll.sql" />
     <Build Include="dbo\Stored Procedures\sp_CustomerContactGetAll.sql" />
     <Build Include="dbo\Stored Procedures\sp_SaleGetAll.sql" />
-    <Build Include="dbo\Stored Procedures\sp_SalesItemGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SaleItemGetAll.sql" />
     <Build Include="dbo\Stored Procedures\sp_StockTransactionGetAll.sql" />
     <Build Include="dbo\Stored Procedures\sp_CategoryGetByID.sql" />
     <Build Include="dbo\Stored Procedures\sp_AttributeGetByID.sql" />
@@ -145,7 +145,7 @@
     <Build Include="dbo\Stored Procedures\sp_UserAccountGetByID.sql" />
     <Build Include="dbo\Stored Procedures\sp_CustomerContactGetByID.sql" />
     <Build Include="dbo\Stored Procedures\sp_SaleGetByID.sql" />
-    <Build Include="dbo\Stored Procedures\sp_SalesItemGetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SaleItemGetByID.sql" />
     <Build Include="dbo\Stored Procedures\sp_StockTransactionGetByID.sql" />
     <Build Include="dbo\Stored Procedures\sp_CategoryAssignAttribute.sql" />
     <Build Include="dbo\Stored Procedures\sp_CategoryUnassignAttribute.sql" />
@@ -158,5 +158,6 @@
     <Build Include="dbo\Stored Procedures\sp_CategoryGetByAttributeID.sql" />
     <Build Include="dbo\Stored Procedures\sp_AttributeGetByCategoryID.sql" />
     <Build Include="dbo\Stored Procedures\sp_SeedDatabase.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SaleItemInsert.sql" />
   </ItemGroup>
 </Project>

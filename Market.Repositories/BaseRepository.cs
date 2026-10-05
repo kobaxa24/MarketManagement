@@ -20,7 +20,7 @@ public abstract class BaseRepository<T> : IRepository<T> where T : class
         _entityName = typeof(T).Name;
     }
 
-    public T GetById(object id)
+    public virtual T GetById(object id)
     {
         ArgumentNullException.ThrowIfNull(id, nameof(id));
 
@@ -47,7 +47,7 @@ public abstract class BaseRepository<T> : IRepository<T> where T : class
             commandType: CommandType.StoredProcedure);
     }
 
-    public object Insert(T entity)
+    public virtual object Insert(T entity)
     {
         ArgumentNullException.ThrowIfNull(entity, nameof(entity));
 

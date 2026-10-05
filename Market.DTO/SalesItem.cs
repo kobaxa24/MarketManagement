@@ -1,8 +1,12 @@
-﻿namespace Market.DTO
+﻿using Market.Extensions.Attributes;
+
+namespace Market.DTO
 {
-    public class SaleItem
+    public class SalesItem
     {
-        public int SaleItemID { get; set; }
+        [IgnoreForInsert] 
+        
+        public int SalesItemID { get; set; }
         public int SaleID { get; set; }
         public int ProductID { get; set; }
         public int Quantity { get; set; }

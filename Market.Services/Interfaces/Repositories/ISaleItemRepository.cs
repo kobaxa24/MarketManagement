@@ -2,6 +2,6 @@
 
 namespace Market.Services.Interfaces.Repositories;
 
-public interface ISaleItemRepository : IRepository<SaleItem>
+public interface ISaleItemRepository : IRepository<SalesItem>
 {
 }
