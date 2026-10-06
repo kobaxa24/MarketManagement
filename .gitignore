@@ -15,3 +15,5 @@ appsettings.Development.json
 *.dbmdl
 *.jfm
 Market.Database/Import Script Logs/
+/Market.Database/Market.Database.jfm
+/Market.Database/Market.Database.dbmdl
